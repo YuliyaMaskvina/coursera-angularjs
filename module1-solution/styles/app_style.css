@@ -1,0 +1,9 @@
+.valid-msg {
+  color:green;
+  border-color: green;
+}
+
+.invalid-msg {
+  color: red;
+  border-color:red;
+}
