@@ -6,7 +6,7 @@
     .controller('MenuListDirectiveController', MenuListDirectiveController)
     .directive('foundItems', FoundItems)
     .service('MenuSearchService', MenuSearchService)
-    .constant('ApiBasePath', "http://davids-restaurant.herokuapp.com");
+    .constant('ApiBasePath', "https://davids-restaurant.herokuapp.com");
 
   function FoundItems() {
     var ddo = {
