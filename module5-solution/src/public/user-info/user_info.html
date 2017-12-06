@@ -1,0 +1,39 @@
+<div class="container">
+
+  <div ng-if="userInfoCtrl.userInfo !== null">
+      <h2 class="text-center">User Info information</h2>
+
+      <br>
+      <span class="userInfo">Firstname: {{userInfoCtrl.userInfo.firstName}}</span>
+      <br>
+      <span class="userInfo">Lastname: {{userInfoCtrl.userInfo.lastName}}</span>
+      <br>
+      <span class="userInfo">Phone: {{userInfoCtrl.userInfo.phone}}</span>
+      <br>
+      <span class="userInfo">Email: {{userInfoCtrl.userInfo.email}}</span>
+      <br>
+      <div ng-if="userInfoCtrl.userInfo.categoryItem && userInfoCtrl.userInfo.categoryItem !== null">
+        <span class="userInfo">Favorite category: </span>
+
+        <span class="userInfo">
+              <div class="menu-item-photo" class="userInfo">
+                <div>{{userInfoCtrl.userInfo.categoryItem.short_name}}</div>
+                <img class="img-responsive" width="250" height="150" ng-src="{{userInfoCtrl.basePath}}/images/{{userInfoCtrl.userInfo.categoryItem.short_name}}.jpg" alt="{{userInfoCtrl.userInfo.categoryItem.name}}">
+              </div>
+              <div class="menu-item-price userCategoryItem">{{userInfoCtrl.userInfo.categoryItem.price_small | currency}}<span> {{userInfoCtrl.userInfo.categoryItem.small_portion_name}}</span> {{userInfoCtrl.userInfo.categoryItem.price_large | currency}} <span>{{userInfoCtrl.userInfo.categoryItem.large_portion_name}}</span></div>
+            <div class="menu-item-description">
+              <h3 class="menu-item-title userInfoMenuItemTitle">{{userInfoCtrl.userInfo.categoryItem.name}}</h3>
+              <p class="menu-item-details userInfoMenuItemTitle">{{userInfoCtrl.userInfo.categoryItem.description}}</p>
+            </div>
+        </span>
+      </div>
+</div>
+
+<div ng-if="userInfoCtrl.userInfo === null">
+  <div class="userInfo">
+    Not Signed Up Yet. <a ui-sref="public.sign-up">Sign up Now!</a>
+  </div>
+<div>
+
+
+</div>
